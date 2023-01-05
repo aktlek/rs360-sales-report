@@ -1,0 +1,457 @@
+[
+  {
+    "qName": "%Date",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Data",
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "%Артикул",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "%Магазин",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "ACCESS",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "SA"
+    ]
+  },
+  {
+    "qName": "Date",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "Day",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "Month",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "MonthEnd",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "MonthYear",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "Quarter",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "QuarterYear",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "SA_KEY",
+    "qTags": [
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "SA",
+      "Data"
+    ]
+  },
+  {
+    "qName": "SUPPLIER",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "TRADEMARK",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "USERID",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "SA"
+    ]
+  },
+  {
+    "qName": "Week",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "WeekDay",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "WeekEnd",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "Year",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "YearWeek",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Calendar"
+    ]
+  },
+  {
+    "qName": "bin",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "is_opt",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Адрес 1",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Баркод",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Бренд",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Вид населенного пункта",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Город",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Группа",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Дата",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Еденица измерения",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "ИД магазина",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Код поставщика",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Код торговой марки",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Количество",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Количество строк модели данных",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Наименование магазина",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Наименование поставщика",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Наименование товара",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Общая сумма в чеке c НДС по конкретному товару",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Обьем",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Отдел",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Подгруппа",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Признак Ecom",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Сумма по ЗЦ",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Тип магазина наименование",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  },
+  {
+    "qName": "Формат магазина",
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Data"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "4da63ecb-e44b-4b6b-b2e7-df46084c8bc2",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vDir",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "lib://Magnum Stage-3 (rs360_qlikservice)/Продажи, Остатки, Поставки TM/2022",
+  "qIsScriptCreated": true
+}

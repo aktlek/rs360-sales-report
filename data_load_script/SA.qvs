@@ -1,0 +1,39 @@
+///$tab SA
+SA:
+LOAD
+    "ACCESS" as ACCESS,
+    '*' as SA_KEY,
+    Upper("USERID") as USERID
+FROM [lib://Users (rs360_qlikservice)]
+(ooxml, embedded labels, table is Users)
+Where ACCESS='ADMIN';
+
+NoConcatenate
+
+SA_tmp1:
+LOAD "ACCESS" as ACCESS, 
+     Upper("USERID") as USERID, 
+     Text("TRADEMARK") as TRADEMARK
+FROM [lib://Users (rs360_qlikservice)]
+(ooxml, embedded labels, table is Users)
+Where TRADEMARK<>'*' and ACCESS='USER'
+;
+
+
+Concatenate(SA)
+LOAD
+ ACCESS, 
+ USERID, 
+ Text(TRADEMARK) as SA_KEY
+Resident SA_tmp1;
+DROP Table SA_tmp1;
+
+Section Access;
+Auth:
+LOAD
+ ACCESS,
+ USERID,
+ SA_KEY
+Resident SA
+WHERE USERID <> '*';
+Section Application;

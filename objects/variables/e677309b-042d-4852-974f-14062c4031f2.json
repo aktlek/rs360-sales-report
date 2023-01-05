@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "e677309b-042d-4852-974f-14062c4031f2",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vArtHierarhy",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "MAGNUM C&C",
+  "tags": []
+}

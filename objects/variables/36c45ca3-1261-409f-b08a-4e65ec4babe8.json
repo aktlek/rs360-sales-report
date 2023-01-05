@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "36c45ca3-1261-409f-b08a-4e65ec4babe8",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vMeasure",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "CurrencyPP",
+  "tags": []
+}

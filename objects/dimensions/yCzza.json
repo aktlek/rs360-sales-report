@@ -1,0 +1,26 @@
+{
+  "qInfo": {
+    "qId": "yCzza",
+    "qType": "dimension"
+  },
+  "qDim": {
+    "qGrouping": "H",
+    "qFieldDefs": [
+      "Отдел",
+      "Группа",
+      "Подгруппа",
+      "Бренд"
+    ],
+    "qFieldLabels": [],
+    "title": "vArtHierarhy",
+    "coloring": {
+      "changeHash": "0.501964586809597",
+      "colorMapRef": "yCzza"
+    }
+  },
+  "qMetaDef": {
+    "title": "vArtHierarhy",
+    "description": "",
+    "tags": []
+  }
+}

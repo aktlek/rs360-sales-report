@@ -1,0 +1,27 @@
+///$tab CALENDAR
+[tmp Calendar]:
+	LOAD
+		FieldValue('Дата',IterNo()) as %Date
+        AutoGenerate 1
+	while not IsNull (FieldValue('Дата',IterNo()));
+
+[Calendar]:
+	LOAD
+//[%Date],
+		[%Date] 												as %Date,
+		Date([%Date]) 										as Date,
+		Year([%Date]) 										as Year,
+		Month([%Date])										as Month,
+		Num(Floor(Date(MonthEnd([%Date]))))					as MonthEnd,
+		SubField(WeekName([%Date],0,0),'/',2)			as Week,
+		Num(Floor(Date(WeekEnd([%Date],0,0))))			as WeekEnd,
+		'Q' & Ceil(Month([%Date])/3) 							as Quarter,
+		Day([%Date]) 											as Day,
+		WeekDay([%Date])										as WeekDay,
+		WeekName([%Date],0,0)							as YearWeek,
+		'Q' & Ceil(Month([%Date])/3) & '-' & Year([%Date]) 		as QuarterYear,
+		Month([%Date]) & ' ' & Year([%Date]) 					as MonthYear
+	RESIDENT [tmp Calendar]
+	ORDER BY [%Date];	
+
+DROP TABLE [tmp Calendar];

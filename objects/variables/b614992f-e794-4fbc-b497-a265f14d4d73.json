@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "b614992f-e794-4fbc-b497-a265f14d4d73",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "vShowDate",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "1",
+  "tags": []
+}
