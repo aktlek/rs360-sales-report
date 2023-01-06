@@ -1,0 +1,30 @@
+///$tab Data
+Data:
+Load * Inline [
+	Дата покупки
+];
+
+for Each vDir in DirList('lib://Magnum Stage-2 (rs360_qlikservice)/Продажи/*')
+	for Each vDir2 in DirList(vDir & '/*')
+    	for Each vFile in FileList(vDir2 & '/*.qvd')
+
+
+
+Concatenate(Data)
+LOAD
+    "Дата покупки",
+    "ИД магазина",
+    "Код продукта",
+    "Код поставщика",
+    "Цена без НДС",
+    "Цена с НДС",
+    "Вид продажи",
+    Количество,
+    "Cумма без НДС",
+    "Cумма с НДС",
+    "Код продукта" & '|' & num("Дата покупки") as DATEKEY
+FROM [$(vFile)] (qvd); //Where Exists(DATEKEY,"Код продукта" & '|' & num("Дата покупки"));
+
+		Next vFile
+	Next vDir2
+Next vDir

@@ -1,0 +1,5 @@
+///$tab Init
+MasterCalendar_tmp:
+Load * Inline [
+	DATEKEY
+];

@@ -1,0 +1,53 @@
+///$tab Master Calendar
+LET usersRows = NoOfRows('Users');
+
+
+for i=0 to $(usersRows) - 1
+
+// 	for j = Date(Peek('DATEFROM',$(i))) to Today() - 1
+//     	Concatenate(MasterCalendar)
+//         Load 
+//         	Peek('TRADEMARK',$(i)) & '|' & j as DATEKEY;
+
+//     	Trace($(Peek('TRADEMARK',$(i))));
+//     Next
+
+LET j = num(Peek('DATEFROM',$(i)));
+
+trace $(j);
+
+Do while j < num(today())
+	
+      	Concatenate(MasterCalendar_tmp)
+        Load
+        	Text(Peek('TRADEMARK',$(i))) as TM,
+            Date($(j)) as DATE
+        AutoGenerate 1;
+
+  LET j=j+1;
+
+loop
+
+Trace($(i));
+
+next
+
+Left Join(MasterCalendar_tmp)
+LOAD
+    "Код продукта" as PRODUCT_CODE,
+    "Наименование торговой марки" as TM
+FROM [lib://Magnum Stage-2 (rs360_qlikservice)/Справочник товаров.qvd]
+(qvd);
+
+NoConcatenate
+
+MasterCalendar:
+Load Distinct
+	PRODUCT_CODE & '|' & num(DATE) as DATEKEY,
+	PRODUCT_CODE,
+    TM,
+    DATE Resident MasterCalendar_tmp;
+
+Drop Table MasterCalendar_tmp;
+
+NoConcatenate

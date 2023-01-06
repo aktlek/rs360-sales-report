@@ -1,1 +1,1 @@
-Main%tab_file_order_divider%SA%tab_file_order_divider%DATA%tab_file_order_divider%CALENDAR%tab_file_order_divider%EXIT SCRIPT
+Main%tab_file_order_divider%Init%tab_file_order_divider%Users%tab_file_order_divider%Master Calendar%tab_file_order_divider%Data%tab_file_order_divider%Раздел%tab_file_order_divider%EXIT SCRIPT%tab_file_order_divider%SA%tab_file_order_divider%DATA%tab_file_order_divider%CALENDAR
