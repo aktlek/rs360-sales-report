@@ -16,20 +16,6 @@
     "rows": 18,
     "cells": [
       {
-        "name": "8c619233-d289-4bd9-87a1-797724f8af3d",
-        "type": "filterpane",
-        "col": 0,
-        "row": 0,
-        "colspan": 3,
-        "rowspan": 1,
-        "bounds": {
-          "y": 0,
-          "x": 0,
-          "width": 8.333333333333332,
-          "height": 5.555555555555555
-        }
-      },
-      {
         "name": "875b1630-4467-4b20-af0d-1b45d76cb9f4",
         "type": "filterpane",
         "col": 3,
@@ -182,6 +168,20 @@
           "width": 11.11111111111111,
           "height": 5.555555555555555
         }
+      },
+      {
+        "name": "hHYsPCm",
+        "type": "qlik-date-picker",
+        "col": 0,
+        "row": 0,
+        "colspan": 3,
+        "rowspan": 1,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 8.333333333333332,
+          "height": 5.555555555555555
+        }
       }
     ],
     "qChildListDef": {
@@ -189,75 +189,108 @@
         "title": "/title"
       }
     },
-    "gridResolution": "large"
+    "gridResolution": "large",
+    "gridMode": "edit"
   },
   "qChildren": [
     {
       "qProperty": {
         "qInfo": {
-          "qId": "8c619233-d289-4bd9-87a1-797724f8af3d",
-          "qType": "filterpane"
+          "qId": "SashJ",
+          "qType": "action-button"
         },
-        "qMetaDef": {},
-        "qChildListDef": {
-          "qData": {
-            "info": "/qInfo"
+        "qMetaDef": {
+          "title": "Год",
+          "description": "",
+          "tags": []
+        },
+        "actions": [
+          {
+            "actionLabel": "",
+            "actionType": "setVariable",
+            "bookmark": "",
+            "field": "",
+            "variable": "vDateType",
+            "showSystemVariables": false,
+            "softLock": false,
+            "value": "Год",
+            "partial": false,
+            "automation": "",
+            "automationPostData": false,
+            "cId": "xJQVan"
           }
+        ],
+        "navigation": {
+          "action": "none",
+          "sheet": "",
+          "story": "",
+          "websiteUrl": "",
+          "sameWindow": false
         },
+        "useEnabledCondition": false,
+        "enabledCondition": 1,
         "showTitles": false,
         "title": "",
         "subtitle": "",
         "footnote": "",
-        "disableNavMenu": true,
+        "disableNavMenu": false,
         "showDetails": false,
-        "visualization": "filterpane"
-      },
-      "qChildren": [
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "5eb44102-4257-4cbc-9173-0e055dc2609b",
-              "qType": "listbox"
+        "style": {
+          "label": "ГОД",
+          "font": {
+            "size": 0.58,
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
             },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "%Date"
-                ],
-                "qFieldLabels": [
-                  "%Date"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByNumeric": -1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": false,
-                "cId": "exqWenR"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
+            "colorExpression": "",
+            "style": {
+              "bold": true,
+              "italic": false,
+              "underline": false
             },
-            "showTitles": true,
-            "title": "Дата",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
+            "align": "center"
           },
-          "qChildren": []
-        }
-      ]
+          "background": {
+            "useColorExpression": true,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": {
+              "qStringExpression": {
+                "qExpr": "=if(vDateType = 'Год',Black(150),black(100))"
+              }
+            },
+            "useImage": false,
+            "size": "auto",
+            "position": "centerCenter",
+            "url": {
+              "qStaticContentUrlDef": {}
+            }
+          },
+          "border": {
+            "useBorder": false,
+            "radius": 0,
+            "width": 0,
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": ""
+          },
+          "icon": {
+            "useIcon": false,
+            "iconType": "",
+            "position": "left"
+          }
+        },
+        "visualization": "action-button",
+        "masterVersion": 0.96
+      },
+      "qChildren": []
     },
     {
       "qProperty": {
@@ -291,10 +324,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=Year"
+                  "Год"
                 ],
                 "qFieldLabels": [
-                  "=Year"
+                  "Год"
                 ],
                 "qSortCriterias": [
                   {
@@ -360,10 +393,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=Month"
+                  "Месяц"
                 ],
                 "qFieldLabels": [
-                  "=Month"
+                  "Месяц"
                 ],
                 "qSortCriterias": [
                   {
@@ -429,10 +462,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=Week"
+                  "Неделя"
                 ],
                 "qFieldLabels": [
-                  "=Week"
+                  "Неделя"
                 ],
                 "qSortCriterias": [
                   {
@@ -482,7 +515,7 @@
                   "=$(=vDateType)"
                 ],
                 "qFieldLabels": [
-                  "Дата"
+                  ""
                 ],
                 "qSortCriterias": [
                   {
@@ -494,6 +527,7 @@
                 ],
                 "qNumberPresentations": [],
                 "qActiveField": 0,
+                "qLabelExpression": "=vDateType",
                 "autoSort": true,
                 "cId": "kpnPq",
                 "othersLabel": "Другие",
@@ -540,10 +574,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=Город"
+                  "=[Населенный пункт]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "Город"
                 ],
                 "qSortCriterias": [
                   {
@@ -600,7 +634,7 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "%Магазин"
+                  "=[Код магазина]"
                 ],
                 "qFieldLabels": [
                   "Код магазина"
@@ -661,7 +695,7 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Наименование магазина"
+                  "=[Магазин]"
                 ],
                 "qFieldLabels": [
                   "Магазин"
@@ -721,7 +755,7 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=[Адрес 1]"
+                  "=[Адрес магазина]"
                 ],
                 "qFieldLabels": [
                   "Адрес Магазина"
@@ -843,10 +877,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "is_opt"
+                  "=[Вид продажи]"
                 ],
                 "qFieldLabels": [
-                  "Опт"
+                  "Вид продажи"
                 ],
                 "qSortCriterias": [
                   {
@@ -973,7 +1007,7 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "TRADEMARK"
+                  "=[Наименование торговой марки]"
                 ],
                 "qFieldLabels": [
                   "Торговая марка"
@@ -1038,10 +1072,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Бренд"
+                  "=[Наименование бренда]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "Бренд"
                 ],
                 "qSortCriterias": [
                   {
@@ -1103,10 +1137,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Отдел"
+                  "=[Отдел]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "Отдел"
                 ],
                 "qSortCriterias": [
                   {
@@ -1298,7 +1332,7 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "%Артикул"
+                  "=[Код продукта]"
                 ],
                 "qFieldLabels": [
                   "Код артикула"
@@ -1359,10 +1393,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Баркод"
+                  "=[Штрихкод]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "Штрихкод"
                 ],
                 "qSortCriterias": [
                   {
@@ -1419,10 +1453,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Наименование товара"
+                  "=[Наименование продукта]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "Наименование товара"
                 ],
                 "qSortCriterias": [
                   {
@@ -1482,12 +1516,12 @@
                 "qLabel": "Продажи, тг. в ПЦ",
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": "Sum([Общая сумма в чеке c НДС по конкретному товару])",
+                "qDef": "Sum(\"Cумма с НДС\")",
                 "qNumFormat": {
                   "qType": "F",
                   "qnDec": 2,
                   "qUseThou": 0,
-                  "qFmt": "# ##0,00",
+                  "qFmt": "# ##0",
                   "qDec": ",",
                   "qThou": " "
                 },
@@ -1598,12 +1632,12 @@
                 "qLabel": "Продажи, тг. в ЗЦ",
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": "Sum([Сумма по ЗЦ])",
+                "qDef": "Sum([Количество] * \"Закупочная цена с НДС\")",
                 "qNumFormat": {
                   "qType": "F",
                   "qnDec": 2,
                   "qUseThou": 0,
-                  "qFmt": "# ##0,00",
+                  "qFmt": "# ##0",
                   "qDec": ",",
                   "qThou": " "
                 },
@@ -1719,7 +1753,7 @@
                   "qType": "F",
                   "qnDec": 2,
                   "qUseThou": 0,
-                  "qFmt": "# ##0,00",
+                  "qFmt": "# ##0",
                   "qDec": ",",
                   "qThou": " "
                 },
@@ -1906,7 +1940,7 @@
             18
           ],
           "columnWidths": [
-            48,
+            98,
             54,
             -1,
             -1,
@@ -2012,10 +2046,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "TRADEMARK"
+                  "=[Наименование торговой марки]"
                 ],
                 "qFieldLabels": [
-                  "TRADEMARK"
+                  "=[Наименование торговой марки]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2104,10 +2138,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Город"
+                  "=[Населенный пункт]"
                 ],
                 "qFieldLabels": [
-                  "Город"
+                  "=[Населенный пункт]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2150,10 +2184,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Наименование магазина"
+                  "=[Магазин]"
                 ],
                 "qFieldLabels": [
-                  "Наименование магазина"
+                  "=[Магазин]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2196,10 +2230,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=[Тип магазина наименование]"
+                  "=[Тип подразделения]"
                 ],
                 "qFieldLabels": [
-                  "=[Тип магазина наименование]"
+                  "=[Тип подразделения]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2465,10 +2499,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Баркод"
+                  "=[Штрихкод]"
                 ],
                 "qFieldLabels": [
-                  "Баркод"
+                  "=[Штрихкод]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2511,10 +2545,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "%Артикул"
+                  "=[Код продукта]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "=[Код продукта]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2557,10 +2591,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Наименование товара"
+                  "=[Наименование продукта]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "=[Наименование продукта]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2603,10 +2637,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Бренд"
+                  "=[Наименование бренда]"
                 ],
                 "qFieldLabels": [
-                  ""
+                  "=[Наименование бренда]"
                 ],
                 "qSortCriterias": [
                   {
@@ -2649,10 +2683,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "is_opt"
+                  "=\"Вид продажи\""
                 ],
                 "qFieldLabels": [
-                  "is_opt"
+                  "=\"Вид продажи\""
                 ],
                 "qSortCriterias": [
                   {
@@ -2675,7 +2709,7 @@
               "qOtherTotalSpec": {}
             },
             "showTitles": true,
-            "title": "Опт",
+            "title": "Вид продажи",
             "subtitle": "",
             "footnote": "",
             "disableNavMenu": false,
@@ -2706,7 +2740,11 @@
             "variable": "vDateType",
             "showSystemVariables": false,
             "softLock": false,
-            "value": "%Date",
+            "value": {
+              "qStringExpression": {
+                "qExpr": "='\"Дата покупки\"'"
+              }
+            },
             "partial": false,
             "automation": "",
             "automationPostData": false,
@@ -2805,7 +2843,7 @@
             "variable": "vDateType",
             "showSystemVariables": false,
             "softLock": false,
-            "value": "Week",
+            "value": "Неделя",
             "partial": false,
             "automation": "",
             "automationPostData": false,
@@ -2904,7 +2942,7 @@
             "variable": "vDateType",
             "showSystemVariables": false,
             "softLock": false,
-            "value": "Month",
+            "value": "Месяц",
             "partial": false,
             "automation": "",
             "automationPostData": false,
@@ -2986,99 +3024,121 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "SashJ",
-          "qType": "action-button"
+          "qId": "hHYsPCm",
+          "qType": "qlik-date-picker"
         },
-        "qMetaDef": {
-          "title": "Год",
-          "description": "",
-          "tags": []
+        "qMetaDef": {},
+        "qListObjectDef": {
+          "qDef": {
+            "qGrouping": "N",
+            "qFieldDefs": [
+              "Дата покупки"
+            ],
+            "qFieldLabels": [],
+            "qSortCriterias": [
+              {
+                "qSortByNumeric": -1,
+                "qExpression": {}
+              },
+              {
+                "qSortByState": 1,
+                "qExpression": {}
+              }
+            ],
+            "qNumberPresentations": [],
+            "qActiveField": 0,
+            "autoSort": false
+          },
+          "qFrequencyMode": "V",
+          "qShowAlternatives": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 1,
+              "qHeight": 10000
+            }
+          ],
+          "qExpressions": []
         },
-        "actions": [
-          {
-            "actionLabel": "",
-            "actionType": "setVariable",
-            "bookmark": "",
-            "field": "",
-            "variable": "vDateType",
-            "showSystemVariables": false,
-            "softLock": false,
-            "value": "Year",
-            "partial": false,
-            "automation": "",
-            "automationPostData": false,
-            "cId": "xJQVan"
-          }
-        ],
-        "navigation": {
-          "action": "none",
-          "sheet": "",
-          "story": "",
-          "websiteUrl": "",
-          "sameWindow": false
+        "props": {
+          "isSingleDate": false,
+          "minDate": {
+            "qStringExpression": {
+              "qExpr": "=Min( {1} [Дата покупки])"
+            }
+          },
+          "maxDate": {
+            "qStringExpression": {
+              "qExpr": "=Max( {1} [Дата покупки])"
+            }
+          },
+          "startDate": {
+            "qStringExpression": {
+              "qExpr": "Max([Дата покупки])"
+            }
+          },
+          "endDate": {
+            "qStringExpression": {
+              "qExpr": "=Max([Дата покупки])"
+            }
+          },
+          "CustomRangesEnabled": true,
+          "customRangeLabel": "Range",
+          "today": "Today",
+          "yesterday": "Yesterday",
+          "lastXDays": "Last $ days",
+          "this": "m",
+          "thisLabel": "This Month",
+          "last": "m",
+          "lastLabel": "Last Month",
+          "numberOf": 1,
+          "previousOrLast": true,
+          "locale": "ru",
+          "format": "DD-MM-YYYY",
+          "separator": " - ",
+          "defaultText": "Выберите период"
         },
-        "useEnabledCondition": false,
-        "enabledCondition": 1,
+        "advanced": true,
         "showTitles": false,
         "title": "",
         "subtitle": "",
         "footnote": "",
         "disableNavMenu": false,
         "showDetails": false,
-        "style": {
-          "label": "ГОД",
-          "font": {
-            "size": 0.58,
-            "useColorExpression": false,
-            "color": {
-              "index": -1,
-              "color": null
-            },
-            "colorExpression": "",
-            "style": {
-              "bold": true,
-              "italic": false,
-              "underline": false
-            },
-            "align": "center"
+        "showDetailsExpression": false,
+        "visualization": "qlik-date-picker",
+        "version": 1,
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "calendar",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "Date picker",
+          "description": "A calendar object that allows a user to make selections in a date field.\nVersion: 2.39.0",
+          "template": "qlik-date-picker",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "type": "visualization",
+          "version": "2.39.0",
+          "preview": "preview.png",
+          "keywords": "qlik-sense, visualization",
+          "author": "Nodier Torres",
+          "homepage": "http://branch.qlik.com/#/project/5697a878dcc497f80ed514bf",
+          "license": "MIT",
+          "repository": "https://github.com/qlik-oss/SenseDateRangePicker/tree/qlik-date-picker",
+          "dependencies": {
+            "qlik-sense": ">=5.5.x"
           },
-          "background": {
-            "useColorExpression": true,
-            "color": {
-              "index": -1,
-              "color": null
-            },
-            "colorExpression": {
-              "qStringExpression": {
-                "qExpr": "=if(vDateType = 'Год',Black(150),black(100))"
-              }
-            },
-            "useImage": false,
-            "size": "auto",
-            "position": "centerCenter",
-            "url": {
-              "qStaticContentUrlDef": {}
-            }
+          "bundle": {
+            "id": "qlik-dashboard-bundle",
+            "name": "Qlik Dashboard bundle",
+            "description": "This is a set of supported objects that will facilitate dashboard creation in Qlik Sense. These can be used in addition to the objects found under \"Charts\".\n\nFor limitations and support conditions, see the documentation."
           },
-          "border": {
-            "useBorder": false,
-            "radius": 0,
-            "width": 0,
-            "useColorExpression": false,
-            "color": {
-              "index": -1,
-              "color": null
-            },
-            "colorExpression": ""
-          },
-          "icon": {
-            "useIcon": false,
-            "iconType": "",
-            "position": "left"
-          }
-        },
-        "visualization": "action-button",
-        "masterVersion": 0.96
+          "installer": "QlikExtensionBundler",
+          "previewIconURL": "https://bi.rs360.kz/extensions/qlik-date-picker/preview.png"
+        }
       },
       "qChildren": []
     }

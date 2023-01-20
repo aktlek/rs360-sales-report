@@ -1,260 +1,92 @@
 [
   {
-    "qName": "%Date",
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date",
-      "$key"
-    ],
-    "qSrcTables": [
-      "Data",
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "%Артикул",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "Data"
-    ]
-  },
-  {
-    "qName": "%Магазин",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "Data"
-    ]
-  },
-  {
     "qName": "ACCESS",
     "qTags": [
-      "$text",
-      "$ascii"
-    ],
-    "qSrcTables": [
-      "SA"
-    ]
-  },
-  {
-    "qName": "Date",
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "Day",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "Month",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "MonthEnd",
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "MonthYear",
-    "qTags": [
+      "$ascii",
       "$text"
     ],
     "qSrcTables": [
-      "Calendar"
+      "Users"
     ]
   },
   {
-    "qName": "Quarter",
+    "qName": "Cумма без НДС",
     "qTags": [
-      "$text",
-      "$ascii"
+      "$numeric"
     ],
     "qSrcTables": [
-      "Calendar"
+      "Data"
     ]
   },
   {
-    "qName": "QuarterYear",
+    "qName": "Cумма с НДС",
     "qTags": [
-      "$text",
-      "$ascii"
+      "$numeric"
     ],
     "qSrcTables": [
-      "Calendar"
+      "Data"
     ]
   },
   {
-    "qName": "SA_KEY",
+    "qName": "DATEFROM",
     "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Users"
+    ]
+  },
+  {
+    "qName": "DATEKEY",
+    "qTags": [
+      "$ascii",
       "$text",
       "$key"
     ],
     "qSrcTables": [
-      "SA",
+      "MasterCalendar",
       "Data"
     ]
   },
   {
-    "qName": "SUPPLIER",
-    "qTags": [
-      "$text",
-      "$ascii"
-    ],
-    "qSrcTables": [
-      "Data"
-    ]
-  },
-  {
-    "qName": "TRADEMARK",
+    "qName": "NAME",
     "qTags": [
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "Users"
     ]
   },
   {
     "qName": "USERID",
     "qTags": [
-      "$text",
-      "$ascii"
+      "$ascii",
+      "$text"
     ],
     "qSrcTables": [
-      "SA"
+      "Users"
     ]
   },
   {
-    "qName": "Week",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "WeekDay",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "WeekEnd",
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "Year",
-    "qTags": [
-      "$numeric",
-      "$integer"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "YearWeek",
-    "qTags": [
-      "$numeric",
-      "$integer",
-      "$timestamp",
-      "$date"
-    ],
-    "qSrcTables": [
-      "Calendar"
-    ]
-  },
-  {
-    "qName": "bin",
-    "qTags": [
-      "$text",
-      "$ascii"
-    ],
-    "qSrcTables": [
-      "Data"
-    ]
-  },
-  {
-    "qName": "is_opt",
+    "qName": "Адрес магазина",
     "qTags": [
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "Stores"
     ]
   },
   {
-    "qName": "Адрес 1",
+    "qName": "БИН поставщика",
     "qTags": [
+      "$ascii",
       "$text"
     ],
     "qSrcTables": [
-      "Data"
-    ]
-  },
-  {
-    "qName": "Баркод",
-    "qTags": [
-      "$text",
-      "$ascii"
-    ],
-    "qSrcTables": [
-      "Data"
-    ]
-  },
-  {
-    "qName": "Бренд",
-    "qTags": [
-      "$text"
-    ],
-    "qSrcTables": [
-      "Data"
+      "Suppliers"
     ]
   },
   {
@@ -263,16 +95,26 @@
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "Stores"
     ]
   },
   {
-    "qName": "Город",
+    "qName": "Вид продажи",
     "qTags": [
       "$text"
     ],
     "qSrcTables": [
       "Data"
+    ]
+  },
+  {
+    "qName": "Год",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "MasterCalendar"
     ]
   },
   {
@@ -281,7 +123,7 @@
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
     ]
   },
   {
@@ -293,13 +135,25 @@
       "$date"
     ],
     "qSrcTables": [
+      "MasterCalendar"
+    ]
+  },
+  {
+    "qName": "Дата покупки",
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
       "Data"
     ]
   },
   {
-    "qName": "Еденица измерения",
+    "qName": "Закупочная цена с НДС",
     "qTags": [
-      "$text"
+      "$numeric"
     ],
     "qSrcTables": [
       "Data"
@@ -309,30 +163,54 @@
     "qName": "ИД магазина",
     "qTags": [
       "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Data",
+      "Stores"
+    ]
+  },
+  {
+    "qName": "Код магазина",
+    "qTags": [
+      "$numeric",
       "$integer"
     ],
     "qSrcTables": [
-      "Data"
+      "Stores"
     ]
   },
   {
     "qName": "Код поставщика",
     "qTags": [
       "$numeric",
-      "$integer"
+      "$integer",
+      "$key"
     ],
     "qSrcTables": [
-      "Data"
+      "Data",
+      "Suppliers"
     ]
   },
   {
-    "qName": "Код торговой марки",
+    "qName": "Код продукта",
     "qTags": [
-      "$numeric",
-      "$integer"
+      "$ascii",
+      "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
+    ]
+  },
+  {
+    "qName": "Код типа подразделения",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Stores"
     ]
   },
   {
@@ -345,22 +223,31 @@
     ]
   },
   {
-    "qName": "Количество строк модели данных",
+    "qName": "Магазин",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Stores"
+    ]
+  },
+  {
+    "qName": "Месяц",
     "qTags": [
       "$numeric",
       "$integer"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
     ]
   },
   {
-    "qName": "Наименование магазина",
+    "qName": "Наименование бренда",
     "qTags": [
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
     ]
   },
   {
@@ -369,34 +256,46 @@
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "Suppliers"
     ]
   },
   {
-    "qName": "Наименование товара",
+    "qName": "Наименование продукта",
     "qTags": [
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
     ]
   },
   {
-    "qName": "Общая сумма в чеке c НДС по конкретному товару",
+    "qName": "Наименование торговой марки",
     "qTags": [
-      "$numeric"
+      "$text",
+      "$key"
     ],
     "qSrcTables": [
-      "Data"
+      "Users",
+      "MasterCalendar"
     ]
   },
   {
-    "qName": "Обьем",
+    "qName": "Населенный пункт",
     "qTags": [
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "Stores"
+    ]
+  },
+  {
+    "qName": "Неделя",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "MasterCalendar"
     ]
   },
   {
@@ -405,7 +304,7 @@
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
     ]
   },
   {
@@ -414,20 +313,30 @@
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
     ]
   },
   {
-    "qName": "Признак Ecom",
+    "qName": "Тип подразделения",
     "qTags": [
       "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "Stores"
     ]
   },
   {
-    "qName": "Сумма по ЗЦ",
+    "qName": "Формат магазина",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Stores"
+    ]
+  },
+  {
+    "qName": "Цена без НДС",
     "qTags": [
       "$numeric"
     ],
@@ -436,22 +345,22 @@
     ]
   },
   {
-    "qName": "Тип магазина наименование",
+    "qName": "Цена с НДС",
     "qTags": [
-      "$text"
+      "$numeric"
     ],
     "qSrcTables": [
       "Data"
     ]
   },
   {
-    "qName": "Формат магазина",
+    "qName": "Штрихкод",
     "qTags": [
-      "$text",
-      "$ascii"
+      "$ascii",
+      "$text"
     ],
     "qSrcTables": [
-      "Data"
+      "MasterCalendar"
     ]
   }
 ]

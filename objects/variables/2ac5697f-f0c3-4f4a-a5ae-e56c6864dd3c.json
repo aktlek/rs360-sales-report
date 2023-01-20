@@ -1,15 +1,15 @@
 {
   "qInfo": {
-    "qId": "6418b3c5-cac3-4182-815f-78fe0f8dece3",
+    "qId": "2ac5697f-f0c3-4f4a-a5ae-e56c6864dd3c",
     "qType": "variable"
   },
   "qMetaDef": {},
-  "qName": "vDir2",
+  "qName": "j",
   "qNumberPresentation": {
     "qType": "U",
     "qnDec": 10,
     "qUseThou": 0
   },
-  "qDefinition": "lib://Magnum Stage-2 (rs360_qlikservice)/Продажи/2023/1",
+  "qDefinition": "44946",
   "qIsScriptCreated": true
 }

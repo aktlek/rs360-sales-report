@@ -22,14 +22,14 @@ SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;
 ///$tab Init
 MasterCalendar_tmp:
 Load * Inline [
-	DATEKEY
+	Наименование торговой марки,Дата
 ];
-///$tab Users
+
 
 Users:
 LOAD
     "ACCESS",
-    TRADEMARK,
+    TRADEMARK as "Наименование торговой марки",
     NAME,
     "USERID",
     DATEFROM
@@ -39,18 +39,11 @@ Where "ACCESS" = 'USER';
 
 
 ///$tab Master Calendar
+
 LET usersRows = NoOfRows('Users');
 
 
 for i=0 to $(usersRows) - 1
-
-// 	for j = Date(Peek('DATEFROM',$(i))) to Today() - 1
-//     	Concatenate(MasterCalendar)
-//         Load 
-//         	Peek('TRADEMARK',$(i)) & '|' & j as DATEKEY;
-
-//     	Trace($(Peek('TRADEMARK',$(i))));
-//     Next
 
 LET j = num(Peek('DATEFROM',$(i)));
 
@@ -60,8 +53,8 @@ Do while j < num(today())
 	
       	Concatenate(MasterCalendar_tmp)
         Load
-        	Text(Peek('TRADEMARK',$(i))) as TM,
-            Date($(j)) as DATE
+        	Text(Peek('Наименование торговой марки',$(i))) as "Наименование торговой марки",
+            Date($(j)) as Дата
         AutoGenerate 1;
 
   LET j=j+1;
@@ -74,8 +67,14 @@ next
 
 Left Join(MasterCalendar_tmp)
 LOAD
-    "Код продукта" as PRODUCT_CODE,
-    "Наименование торговой марки" as TM
+    Штрихкод,
+    Text("Код продукта") as "Код продукта",
+    "Наименование продукта",
+    "Наименование торговой марки",
+    "Наименование бренда",
+    Отдел,
+    Группа,
+    Подгруппа
 FROM [lib://Magnum Stage-2 (rs360_qlikservice)/Справочник товаров.qvd]
 (qvd);
 
@@ -83,17 +82,28 @@ NoConcatenate
 
 MasterCalendar:
 Load Distinct
-	PRODUCT_CODE & '|' & num(DATE) as DATEKEY,
-	PRODUCT_CODE,
-    TM,
-    DATE Resident MasterCalendar_tmp;
+	Text("Код продукта") & '|' & num(Дата) as DATEKEY,
+	"Код продукта",
+    Штрихкод,
+    "Наименование продукта",
+    "Наименование торговой марки",
+    "Наименование бренда",
+    Отдел,
+    Группа,
+    Подгруппа,
+    [Дата],
+    Week([Дата]) as Неделя,
+    Month([Дата]) as Месяц,
+    Year([Дата]) as Год
+    
+Resident MasterCalendar_tmp;
 
 Drop Table MasterCalendar_tmp;
 
 NoConcatenate
 
 
-///$tab Data
+///$tab Sales
 Data:
 Load * Inline [
 	Дата покупки
@@ -109,7 +119,6 @@ Concatenate(Data)
 LOAD
     "Дата покупки",
     "ИД магазина",
-    "Код продукта",
     "Код поставщика",
     "Цена без НДС",
     "Цена с НДС",
@@ -117,198 +126,62 @@ LOAD
     Количество,
     "Cумма без НДС",
     "Cумма с НДС",
+    "Закупочная цена с НДС",
     "Код продукта" & '|' & num("Дата покупки") as DATEKEY
-FROM [$(vFile)] (qvd); //Where Exists(DATEKEY,"Код продукта" & '|' & num("Дата покупки"));
+FROM [$(vFile)] (qvd);
 
 		Next vFile
 	Next vDir2
 Next vDir
 
+Search Exclude DATEKEY;
 
 
 
 
-///$tab Раздел
-NoConcatenate
 
-[Справочник товаров]:
+
+
+///$tab SKU Dictionary
+// Left Join(Data)
+// LOAD
+//     Штрихкод,
+//     Num("Код продукта") as "Код продукта",
+//     "Наименование продукта",
+//     "Наименование торговой марки",
+//     "Наименование бренда",
+//     Отдел,
+//     Группа,
+//     Подгруппа
+// FROM [lib://Magnum Stage-2 (rs360_qlikservice)/Справочник товаров.qvd]
+// (qvd);
+
+
+///$tab Stores Dictionary
+Stores:
 LOAD
-    Штрихкод,
-    "Код продукта",
-    "Наименование продукта",
-    "Код торговой марки",
-    "Наименование торговой марки",
-    "Наименование бренда",
-    Отдел,
-    Группа,
-    Подгруппа,
-    Обьем,
-    "Еденица измерения"
-FROM [lib://Magnum Stage-2 (rs360_qlikservice)/Справочник товаров.qvd]
+    "Населенный пункт",
+    "Вид населенного пункта",
+    "ИД магазина",
+    "Код магазина",
+    Магазин,
+    "Формат магазина",
+    "Код типа подразделения",
+    "Тип подразделения",
+    "Адрес магазина"
+FROM [lib://Magnum Stage-2 (rs360_qlikservice)/Справочник магазинов.qvd]
 (qvd);
 
 
+///$tab Suppliers Dictionary
+Suppliers:
+LOAD
+        supp_code as [Код поставщика],
+        FirstSortedValue(DISTINCT supp_name,-datestart) as [Наименование поставщика],
+        Text(FirstSortedValue(DISTINCT code_zip,-datestart)) as [БИН поставщика]
+    FROM [lib://Magnum Stage-1 (rs360_qlikservice)/ADB/dwh_data/dim_supp_list.qvd]
+    (qvd)
+    Group by
+        supp_code;
 ///$tab EXIT SCRIPT
 exit script;
-
-///$tab SA
-SA:
-LOAD
-    "ACCESS" as ACCESS,
-    '*' as SA_KEY,
-    Upper("USERID") as USERID
-FROM [lib://Users (rs360_qlikservice)]
-(ooxml, embedded labels, table is Users)
-Where ACCESS='ADMIN';
-
-NoConcatenate
-
-SA_tmp1:
-LOAD "ACCESS" as ACCESS, 
-     Upper("USERID") as USERID, 
-     Text("TRADEMARK") as TRADEMARK
-FROM [lib://Users (rs360_qlikservice)]
-(ooxml, embedded labels, table is Users)
-Where TRADEMARK<>'*' and ACCESS='USER'
-;
-
-
-Concatenate(SA)
-LOAD
- ACCESS, 
- USERID, 
- Text(TRADEMARK) as SA_KEY
-Resident SA_tmp1;
-DROP Table SA_tmp1;
-
-Section Access;
-Auth:
-LOAD
- ACCESS,
- USERID,
- SA_KEY
-Resident SA
-WHERE USERID <> '*';
-Section Application;
-
-
-///$tab DATA
-Data:
-Load * Inline [
-	Дата
-];
-
-set ErrorMode = 0;
-
-for Each vDir in DirList('lib://Magnum Stage-3 (rs360_qlikservice)/Продажи, Остатки, Поставки TM/*')
-	for Each vDir2 in DirList(vDir & '/*')
-    	for Each vFile in FileList(vDir2 & '/*.qvd')
-        	Concatenate(Data)
-              LOAD
-                  "ИД магазина" ,
-                  "Код продукта" as %Артикул,
-                  "Код поставщика",
-                  Дата,
-                  Дата as %Date,
-                  "Продажи, розница, шт" as Количество,
-                  "Продажи, розница, тенге" as "Общая сумма в чеке c НДС по конкретному товару",
-                  "Продажи по ЗЦ, розница, тенге" as [Сумма по ЗЦ],
-                  "Признак Ecom",
-                  "Наименование поставщика" as "Наименование поставщика" ,
-                  "БИН поставщика" as SUPPLIER,
-                  Text("Наименование торговой марки") as SA_KEY,
-                  "БИН поставщика" as bin,
-                  Штрихкод as Баркод,
-                  "Наименование продукта" as "Наименование товара",
-                  "Код торговой марки",
-                  Text("Наименование торговой марки") as TRADEMARK,
-                  "Наименование бренда" as Бренд,
-                  Отдел,
-                  Группа,
-                  Подгруппа,
-                  Обьем,
-                  "Еденица измерения",
-                  "Населенный пункт" as Город,
-                  "Вид населенного пункта",
-                  "Код магазина" as %Магазин,
-                  Магазин as [Наименование магазина],
-                  "Формат магазина" as [Формат магазина],
-                  //[Код типа подразделения] as [Тип магазина],
-                  "Тип подразделения" as [Тип магазина наименование],
-                  "Адрес магазина" as [Адрес 1],
-                  'Не опт' as is_opt,
-                  '1' as [Количество строк модели данных]
-              FROM [$(vFile)]
-        (qvd);
-
-              Concatenate(Data)
-              LOAD
-                  "ИД магазина" ,
-                  "Код продукта" as %Артикул,
-                  "Код поставщика",
-                  Дата,
-                  Дата as %Date,
-                  "Продажи, оптом, шт" as Количество,
-                  "Продажи, оптом, тенге" as "Общая сумма в чеке c НДС по конкретному товару",
-                  "Продажи по ЗЦ, оптом, тенге" as [Сумма по ЗЦ],
-                  "Признак Ecom",
-                  "Наименование поставщика" as "Наименование поставщика" ,
-                  "БИН поставщика" as SUPPLIER,
-                   Text("Наименование торговой марки") as SA_KEY,
-                  "БИН поставщика" as bin,
-                  Штрихкод as Баркод,
-                  "Наименование продукта" as "Наименование товара",
-                  "Код торговой марки",
-                  Text("Наименование торговой марки") as TRADEMARK,
-                  "Наименование бренда" as Бренд,
-                  Отдел,
-                  Группа,
-                  Подгруппа,
-                  Обьем,
-                  "Еденица измерения",
-                  "Населенный пункт" as Город,
-                  "Вид населенного пункта",
-                  "Код магазина" as %Магазин,
-                  Магазин as [Наименование магазина],
-                  "Формат магазина" as [Формат магазина],
-                  //[Код типа подразделения] as [Тип магазина],
-                  "Тип подразделения" as [Тип магазина наименование],
-                  "Адрес магазина" as [Адрес 1],
-                  'Опт' as is_opt,
-                  '1' as [Количество строк модели данных]
-              FROM [$(vFile)]
-        (qvd);
-		Next vFile
-	Next vDir2
-Next vDir
-
-ErrorMode = 1;
-
-
-///$tab CALENDAR
-[tmp Calendar]:
-	LOAD
-		FieldValue('Дата',IterNo()) as %Date
-        AutoGenerate 1
-	while not IsNull (FieldValue('Дата',IterNo()));
-
-[Calendar]:
-	LOAD
-//[%Date],
-		[%Date] 												as %Date,
-		Date([%Date]) 										as Date,
-		Year([%Date]) 										as Year,
-		Month([%Date])										as Month,
-		Num(Floor(Date(MonthEnd([%Date]))))					as MonthEnd,
-		SubField(WeekName([%Date],0,0),'/',2)			as Week,
-		Num(Floor(Date(WeekEnd([%Date],0,0))))			as WeekEnd,
-		'Q' & Ceil(Month([%Date])/3) 							as Quarter,
-		Day([%Date]) 											as Day,
-		WeekDay([%Date])										as WeekDay,
-		WeekName([%Date],0,0)							as YearWeek,
-		'Q' & Ceil(Month([%Date])/3) & '-' & Year([%Date]) 		as QuarterYear,
-		Month([%Date]) & ' ' & Year([%Date]) 					as MonthYear
-	RESIDENT [tmp Calendar]
-	ORDER BY [%Date];	
-
-DROP TABLE [tmp Calendar];

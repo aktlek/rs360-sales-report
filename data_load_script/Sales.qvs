@@ -1,4 +1,4 @@
-///$tab Data
+///$tab Sales
 Data:
 Load * Inline [
 	Дата покупки
@@ -14,7 +14,6 @@ Concatenate(Data)
 LOAD
     "Дата покупки",
     "ИД магазина",
-    "Код продукта",
     "Код поставщика",
     "Цена без НДС",
     "Цена с НДС",
@@ -22,9 +21,12 @@ LOAD
     Количество,
     "Cумма без НДС",
     "Cумма с НДС",
+    "Закупочная цена с НДС",
     "Код продукта" & '|' & num("Дата покупки") as DATEKEY
-FROM [$(vFile)] (qvd); //Where Exists(DATEKEY,"Код продукта" & '|' & num("Дата покупки"));
+FROM [$(vFile)] (qvd);
 
 		Next vFile
 	Next vDir2
 Next vDir
+
+Search Exclude DATEKEY;
