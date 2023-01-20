@@ -1,9 +1,11 @@
 {
-  "qTitle": "Отчет о продажах ТМ(1)",
-  "qThumbnail": {},
+  "qTitle": "Отчет о продажах ТМ версия 2.0",
+  "qThumbnail": {
+    "qUrl": "/appcontent/34d9da0b-53e6-4b23-997e-40b4126c7fcf/Копия Qlik App Cover Template.png"
+  },
   "published": false,
   "publishTime": "1753-01-01T00:00:00.000Z",
-  "description": "",
-  "dynamicColor": "",
+  "description": "Отчет о продажах",
+  "dynamicColor": "hsla(180,18%,43%,1)",
   "stream": null
 }

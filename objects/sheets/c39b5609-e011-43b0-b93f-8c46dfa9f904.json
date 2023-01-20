@@ -10,7 +10,9 @@
     },
     "rank": -0.5,
     "thumbnail": {
-      "qStaticContentUrlDef": {}
+      "qStaticContentUrlDef": {
+        "qUrl": "/appcontent/34d9da0b-53e6-4b23-997e-40b4126c7fcf/sheet_thumb_c39b5609-e011-43b0-b93f-8c46dfa9f904-0.12730168933313313.png"
+      }
     },
     "columns": 36,
     "rows": 18,

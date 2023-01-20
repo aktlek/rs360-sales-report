@@ -15,7 +15,8 @@
       "sheetLogoPosition": "",
       "rtl": false,
       "theme": "horizon",
-      "disableCellNavMenu": false
+      "disableCellNavMenu": false,
+      "enableHcModifiers": true
     },
     "qChildren": []
   }
