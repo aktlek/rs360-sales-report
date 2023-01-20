@@ -17,3 +17,4 @@ TOP поставщиков|
 Branch Name|Qlik application
 ---|---
 main|[https://bi.rs360.kz/sense/app/943d4225-0a53-4c2e-8cf4-369ef4219019](https://bi.rs360.kz/sense/app/943d4225-0a53-4c2e-8cf4-369ef4219019)
+release|[https://bi.rs360.kz/sense/app/34d9da0b-53e6-4b23-997e-40b4126c7fcf](https://bi.rs360.kz/sense/app/34d9da0b-53e6-4b23-997e-40b4126c7fcf)
