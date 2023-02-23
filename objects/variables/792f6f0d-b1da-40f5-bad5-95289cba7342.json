@@ -1,15 +1,13 @@
 {
   "qInfo": {
-    "qId": "8eeb1d43-b205-4f8b-b6f9-67e9b7a549a1",
+    "qId": "792f6f0d-b1da-40f5-bad5-95289cba7342",
     "qType": "variable"
   },
   "qMetaDef": {},
-  "qName": "vDateType",
+  "qName": "a",
   "qNumberPresentation": {
     "qType": "U",
     "qnDec": 10,
     "qUseThou": 0
-  },
-  "qDefinition": "Дата",
-  "tags": []
+  }
 }

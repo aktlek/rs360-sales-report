@@ -1,0 +1,27 @@
+///$tab Sales
+Data:
+Load * Inline [
+	ИД магазина
+];
+
+for Each vDir in DirList('lib://Magnum Stage-2 (rs360_qlikservice)/Продажи/*')
+	for Each vDir2 in DirList(vDir & '/*')
+    	for Each vFile in FileList(vDir2 & '/*.qvd')
+          Concatenate(Data)
+          LOAD
+              Text("ИД магазина") as "ИД магазина",
+              "Код поставщика",
+              "Цена без НДС",
+              "Цена с НДС",
+              "Вид продажи",
+              Количество,
+              "Cумма без НДС",
+              "Cумма с НДС",
+              "Закупочная цена с НДС",
+              Date("Дата покупки") & '|' & Text("Код продукта") as KEY
+          FROM [$(vFile)] (qvd) Where Exists(Дата,Date("Дата покупки")) and Exists("Код продукта",Text("Код продукта"));
+		Next vFile
+	Next vDir2
+Next vDir
+
+Search Exclude KEY,"Закупочная цена с НДС","Cумма с НДС","Cумма без НДС",Количество,"Цена с НДС","Цена без НДС";

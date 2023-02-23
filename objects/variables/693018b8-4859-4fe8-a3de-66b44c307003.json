@@ -1,15 +1,15 @@
 {
   "qInfo": {
-    "qId": "8eeb1d43-b205-4f8b-b6f9-67e9b7a549a1",
+    "qId": "693018b8-4859-4fe8-a3de-66b44c307003",
     "qType": "variable"
   },
   "qMetaDef": {},
-  "qName": "vDateType",
+  "qName": "i",
   "qNumberPresentation": {
     "qType": "U",
     "qnDec": 10,
     "qUseThou": 0
   },
-  "qDefinition": "Дата",
-  "tags": []
+  "qDefinition": "112",
+  "qIsScriptCreated": true
 }

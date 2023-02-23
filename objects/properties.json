@@ -1,10 +1,15 @@
 {
-  "qTitle": "Отчет о продажах ТМ(1)",
-  "qThumbnail": {},
+  "qTitle": "Отчет о продажах ТМ",
+  "qThumbnail": {
+    "qUrl": "/appcontent/943d4225-0a53-4c2e-8cf4-369ef4219019/Продажи.png"
+  },
   "qHasSectionAccess": true,
-  "published": false,
-  "publishTime": "1753-01-01T00:00:00.000Z",
+  "published": true,
+  "publishTime": "2023-01-05T18:11:16.572Z",
   "description": "",
-  "dynamicColor": "",
-  "stream": null
+  "dynamicColor": "hsla(180,18%,43%,1)",
+  "stream": {
+    "id": "5a7a75b2-a9e6-4955-bb03-415e66d23353",
+    "name": "DEVELOPMENT"
+  }
 }

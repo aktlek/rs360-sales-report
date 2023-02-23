@@ -6,15 +6,16 @@
   "qDim": {
     "qGrouping": "N",
     "qFieldDefs": [
-      "Наименование товара"
+      "=[Наименование продукта]"
     ],
     "qFieldLabels": [
       "SKU"
     ],
     "title": "SKU",
     "coloring": {
-      "changeHash": "0.3950472765899967",
-      "colorMapRef": "PmsmAm"
+      "changeHash": "0.8527939745053603",
+      "colorMapRef": "PmsmAm",
+      "hasValueColors": false
     }
   },
   "qMetaDef": {

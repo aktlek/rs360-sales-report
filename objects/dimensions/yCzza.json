@@ -9,13 +9,14 @@
       "Отдел",
       "Группа",
       "Подгруппа",
-      "Бренд"
+      "=[Наименование бренда]"
     ],
     "qFieldLabels": [],
     "title": "vArtHierarhy",
     "coloring": {
-      "changeHash": "0.501964586809597",
-      "colorMapRef": "yCzza"
+      "changeHash": "0.9195315191158469",
+      "colorMapRef": "yCzza",
+      "hasValueColors": false
     }
   },
   "qMetaDef": {

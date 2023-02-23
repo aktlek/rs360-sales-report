@@ -1,5 +1,17 @@
 ///$tab Init
 MasterCalendar_tmp:
 Load * Inline [
-	DATEKEY
+	Наименование торговой марки,Дата
 ];
+
+
+Users:
+LOAD
+    "ACCESS",
+    TRADEMARK as "Наименование торговой марки",
+    NAME,
+    "USERID",
+    DATEFROM
+FROM [lib://Users (rs360_qlikservice)]
+(ooxml, embedded labels, table is Users)
+Where "ACCESS" = 'USER';

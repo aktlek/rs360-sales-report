@@ -10,6 +10,6 @@
     "qnDec": 10,
     "qUseThou": 0
   },
-  "qDefinition": "lib://Magnum Stage-3 (rs360_qlikservice)/Продажи, Остатки, Поставки TM/2022",
+  "qDefinition": "lib://Magnum Stage-2 (rs360_qlikservice)/Продажи/2023",
   "qIsScriptCreated": true
 }

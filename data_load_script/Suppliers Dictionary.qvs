@@ -1,0 +1,10 @@
+///$tab Suppliers Dictionary
+Suppliers:
+LOAD
+        supp_code as [Код поставщика],
+        FirstSortedValue(DISTINCT supp_name,-datestart) as [Наименование поставщика],
+        Text(FirstSortedValue(DISTINCT code_zip,-datestart)) as [БИН поставщика]
+    FROM [lib://Magnum Stage-1 (rs360_qlikservice)/ADB/dwh_data/dim_supp_list.qvd]
+    (qvd)
+    Group by
+        supp_code;

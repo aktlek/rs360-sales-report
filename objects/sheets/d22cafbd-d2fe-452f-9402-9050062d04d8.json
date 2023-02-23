@@ -16,20 +16,6 @@
     "rows": 18,
     "cells": [
       {
-        "name": "FPHStH",
-        "type": "filterpane",
-        "col": 0,
-        "row": 0,
-        "colspan": 3,
-        "rowspan": 1,
-        "bounds": {
-          "x": 0,
-          "y": 0,
-          "width": 8.333333333333332,
-          "height": 5.555555555555556
-        }
-      },
-      {
         "name": "BthJW",
         "type": "filterpane",
         "col": 3,
@@ -135,8 +121,8 @@
         "colspan": 2,
         "rowspan": 1,
         "bounds": {
-          "y": 0,
           "x": 25,
+          "y": 0,
           "width": 5.555555555555555,
           "height": 5.555555555555555
         }
@@ -163,38 +149,10 @@
         "colspan": 2,
         "rowspan": 1,
         "bounds": {
-          "x": 19.444444444444446,
           "y": 0,
+          "x": 19.444444444444446,
           "width": 5.555555555555555,
           "height": 5.555555555555555
-        }
-      },
-      {
-        "name": "rhpLbjj",
-        "type": "filterpane",
-        "col": 0,
-        "row": 1,
-        "colspan": 3,
-        "rowspan": 5,
-        "bounds": {
-          "y": 5.555555555555555,
-          "x": 0,
-          "width": 8.333333333333332,
-          "height": 27.77777777777778
-        }
-      },
-      {
-        "name": "MsfFy",
-        "type": "filterpane",
-        "col": 0,
-        "row": 7,
-        "colspan": 3,
-        "rowspan": 11,
-        "bounds": {
-          "y": 38.88888888888889,
-          "x": 0,
-          "width": 8.333333333333332,
-          "height": 61.111111111111114
         }
       },
       {
@@ -209,6 +167,62 @@
           "x": 41.66666666666667,
           "width": 11.11111111111111,
           "height": 5.555555555555555
+        }
+      },
+      {
+        "name": "bbynp",
+        "type": "qlik-date-picker",
+        "col": 0,
+        "row": 0,
+        "colspan": 3,
+        "rowspan": 1,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 8.333333333333332,
+          "height": 5.555555555555555
+        }
+      },
+      {
+        "name": "jApuWM",
+        "type": "filterpane",
+        "col": 0,
+        "row": 1,
+        "colspan": 3,
+        "rowspan": 5,
+        "bounds": {
+          "y": 5.555555555555555,
+          "x": 0,
+          "width": 8.333333333333332,
+          "height": 27.77777777777778
+        }
+      },
+      {
+        "name": "KdefGB",
+        "type": "filterpane",
+        "col": 0,
+        "row": 6,
+        "colspan": 3,
+        "rowspan": 8,
+        "bounds": {
+          "y": 33.33333333333333,
+          "x": 0,
+          "width": 8.333333333333332,
+          "height": 44.44444444444444
+        }
+      },
+      {
+        "name": "wCkrx",
+        "type": "filterpane",
+        "col": 0,
+        "row": 14,
+        "colspan": 3,
+        "rowspan": 4,
+        "bounds": {
+          "y": 77.77777777777779,
+          "x": 0,
+          "width": 8.333333333333332,
+          "height": 22.22222222222222
         }
       }
     ],
@@ -235,77 +249,130 @@
         "value": "",
         "cId": "GyDFCuj"
       }
-    ]
+    ],
+    "gridMode": "edit"
   },
   "qChildren": [
     {
       "qProperty": {
         "qInfo": {
-          "qId": "FPHStH",
-          "qType": "filterpane"
+          "qId": "bbynp",
+          "qType": "qlik-date-picker"
         },
         "qMetaDef": {},
-        "qChildListDef": {
-          "qData": {
-            "info": "/qInfo"
-          }
+        "qListObjectDef": {
+          "qDef": {
+            "qGrouping": "N",
+            "qFieldDefs": [
+              "Дата"
+            ],
+            "qFieldLabels": [],
+            "qSortCriterias": [
+              {
+                "qSortByNumeric": -1,
+                "qExpression": {}
+              },
+              {
+                "qSortByState": 1,
+                "qExpression": {}
+              }
+            ],
+            "qNumberPresentations": [],
+            "qActiveField": 0,
+            "autoSort": false
+          },
+          "qFrequencyMode": "V",
+          "qShowAlternatives": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 1,
+              "qHeight": 10000
+            }
+          ],
+          "qExpressions": []
         },
+        "props": {
+          "isSingleDate": false,
+          "minDate": {
+            "qStringExpression": {
+              "qExpr": "Min( {1} [Дата])"
+            }
+          },
+          "maxDate": {
+            "qStringExpression": {
+              "qExpr": "Max( {1} [Дата])"
+            }
+          },
+          "startDate": {
+            "qStringExpression": {
+              "qExpr": "Max([Дата])"
+            }
+          },
+          "endDate": {
+            "qStringExpression": {
+              "qExpr": "Max([Дата])"
+            }
+          },
+          "CustomRangesEnabled": true,
+          "customRangeLabel": "Range",
+          "today": "Today",
+          "yesterday": "Yesterday",
+          "lastXDays": "Last $ days",
+          "this": "m",
+          "thisLabel": "This Month",
+          "last": "m",
+          "lastLabel": "Last Month",
+          "numberOf": 1,
+          "previousOrLast": true,
+          "locale": "ru",
+          "format": "DD-MM-YYYY",
+          "separator": " - ",
+          "defaultText": "Выберите период"
+        },
+        "advanced": true,
         "showTitles": false,
         "title": "",
         "subtitle": "",
         "footnote": "",
-        "disableNavMenu": true,
+        "disableNavMenu": false,
         "showDetails": false,
-        "visualization": "filterpane"
-      },
-      "qChildren": [
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "8884498b-69c6-4f35-9db0-d37c6c3c7abf",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "%Date"
-                ],
-                "qFieldLabels": [
-                  "%Date"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "exqWenR"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Дата",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
+        "showDetailsExpression": false,
+        "visualization": "qlik-date-picker",
+        "version": 1,
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "calendar",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "Date picker",
+          "description": "A calendar object that allows a user to make selections in a date field.\nVersion: 2.39.0",
+          "template": "qlik-date-picker",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "type": "visualization",
+          "version": "2.39.0",
+          "preview": "preview.png",
+          "keywords": "qlik-sense, visualization",
+          "author": "Nodier Torres",
+          "homepage": "http://branch.qlik.com/#/project/5697a878dcc497f80ed514bf",
+          "license": "MIT",
+          "repository": "https://github.com/qlik-oss/SenseDateRangePicker/tree/qlik-date-picker",
+          "dependencies": {
+            "qlik-sense": ">=5.5.x"
           },
-          "qChildren": []
+          "bundle": {
+            "id": "qlik-dashboard-bundle",
+            "name": "Qlik Dashboard bundle",
+            "description": "This is a set of supported objects that will facilitate dashboard creation in Qlik Sense. These can be used in addition to the objects found under \"Charts\".\n\nFor limitations and support conditions, see the documentation."
+          },
+          "installer": "QlikExtensionBundler",
+          "previewIconURL": "https://bi.rs360.kz/extensions/qlik-date-picker/preview.png"
         }
-      ]
+      },
+      "qChildren": []
     },
     {
       "qProperty": {
@@ -339,10 +406,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=Year"
+                  "Год"
                 ],
                 "qFieldLabels": [
-                  "=Year"
+                  "Год"
                 ],
                 "qSortCriterias": [
                   {
@@ -408,10 +475,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=Month"
+                  "Месяц"
                 ],
                 "qFieldLabels": [
-                  "=Month"
+                  "Месяц"
                 ],
                 "qSortCriterias": [
                   {
@@ -448,98 +515,72 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "SsCb",
-          "qType": "action-button"
+          "qId": "wCkrx",
+          "qType": "filterpane"
         },
         "qMetaDef": {},
-        "actions": [
-          {
-            "actionLabel": "",
-            "actionType": "setVariable",
-            "bookmark": "",
-            "field": "",
-            "variable": "vMeasure",
-            "showSystemVariables": false,
-            "softLock": false,
-            "value": {
-              "qStringExpression": {
-                "qExpr": "'Count'"
-              }
-            },
-            "partial": false,
-            "cId": "SXmWvnp"
+        "qChildListDef": {
+          "qData": {
+            "info": "/qInfo"
           }
-        ],
-        "navigation": {
-          "action": "none",
-          "sheet": "",
-          "story": "",
-          "websiteUrl": "",
-          "sameWindow": false
         },
-        "useEnabledCondition": false,
-        "enabledCondition": 1,
         "showTitles": false,
         "title": "",
         "subtitle": "",
         "footnote": "",
-        "disableNavMenu": false,
+        "disableNavMenu": true,
         "showDetails": false,
-        "style": {
-          "label": "Штуки",
-          "font": {
-            "size": 0.64,
-            "useColorExpression": true,
-            "color": {
-              "index": -1,
-              "color": null
-            },
-            "colorExpression": "",
-            "style": {
-              "bold": true,
-              "italic": false,
-              "underline": false
-            },
-            "align": "center"
-          },
-          "background": {
-            "useColorExpression": true,
-            "color": {
-              "index": 3,
-              "color": "#83af9b"
-            },
-            "colorExpression": {
-              "qStringExpression": {
-                "qExpr": "=IF(vMeasure = 'Count','#83af9b',\r\n'#b0afae'\n\n)\n"
-              }
-            },
-            "useImage": false,
-            "size": "auto",
-            "position": "centerCenter",
-            "url": {
-              "qStaticContentUrlDef": {}
-            }
-          },
-          "border": {
-            "useBorder": false,
-            "radius": 0,
-            "width": 0,
-            "useColorExpression": false,
-            "color": {
-              "index": -1,
-              "color": null
-            },
-            "colorExpression": ""
-          },
-          "icon": {
-            "useIcon": true,
-            "iconType": "",
-            "position": "left"
-          }
-        },
-        "visualization": "action-button"
+        "showDetailsExpression": false,
+        "visualization": "filterpane"
       },
-      "qChildren": []
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "ZKnyB",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Формат магазина"
+                ],
+                "qFieldLabels": [
+                  "Формат магазина"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "ecJXvA"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Формат",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        }
+      ]
     },
     {
       "qProperty": {
@@ -699,98 +740,387 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "jrDKfu",
-          "qType": "action-button"
+          "qId": "KdefGB",
+          "qType": "filterpane"
         },
         "qMetaDef": {},
-        "actions": [
-          {
-            "actionLabel": "",
-            "actionType": "setVariable",
-            "bookmark": "",
-            "field": "",
-            "variable": "vMeasure",
-            "showSystemVariables": false,
-            "softLock": false,
-            "value": {
-              "qStringExpression": {
-                "qExpr": "'Currency'"
-              }
-            },
-            "partial": false,
-            "cId": "CCMaS"
+        "qChildListDef": {
+          "qData": {
+            "info": "/qInfo"
           }
-        ],
-        "navigation": {
-          "action": "none",
-          "sheet": "",
-          "story": "",
-          "websiteUrl": "",
-          "sameWindow": false
         },
-        "useEnabledCondition": false,
-        "enabledCondition": 1,
         "showTitles": false,
         "title": "",
         "subtitle": "",
         "footnote": "",
-        "disableNavMenu": false,
+        "disableNavMenu": true,
         "showDetails": false,
-        "style": {
-          "label": "Сумма по розничной цене",
-          "font": {
-            "size": 1,
-            "useColorExpression": false,
-            "color": {
-              "index": -1,
-              "color": null
-            },
-            "colorExpression": "",
-            "style": {
-              "bold": true,
-              "italic": false,
-              "underline": false
-            },
-            "align": "center"
-          },
-          "background": {
-            "useColorExpression": true,
-            "color": {
-              "index": 13,
-              "color": "#b0afae"
-            },
-            "colorExpression": {
-              "qStringExpression": {
-                "qExpr": "=IF(vMeasure = 'Currency','#83af9b',\r\nIF(vMeasure = 'Count','#b0afae','#b0afae'\n)\n)\n"
-              }
-            },
-            "useImage": false,
-            "size": "auto",
-            "position": "centerCenter",
-            "url": {
-              "qStaticContentUrlDef": {}
-            }
-          },
-          "border": {
-            "useBorder": true,
-            "radius": 0,
-            "width": 0,
-            "useColorExpression": false,
-            "color": {
-              "index": -1,
-              "color": null
-            },
-            "colorExpression": ""
-          },
-          "icon": {
-            "useIcon": false,
-            "iconType": "",
-            "position": "left"
-          }
-        },
-        "visualization": "action-button"
+        "showDetailsExpression": false,
+        "visualization": "filterpane"
       },
-      "qChildren": []
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "TcaNp",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Отдел]"
+                ],
+                "qFieldLabels": [
+                  "=[Отдел]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": []
+            },
+            "title": "Отдел",
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "vArTnw",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=Группа"
+                ],
+                "qFieldLabels": [
+                  "=Группа"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "wFCqx"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Группа",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "mmqb",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Подгруппа]"
+                ],
+                "qFieldLabels": [
+                  "=[Подгруппа]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "wEfQvB"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Подгруппа",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "TYPmVg",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Штрихкод]"
+                ],
+                "qFieldLabels": [
+                  "=[Штрихкод]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "PZwg"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Баркод",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "jYca",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Код продукта]"
+                ],
+                "qFieldLabels": [
+                  "=[Код продукта]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "mDcfagL"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Код товара",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "JaYDEs",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Наименование продукта]"
+                ],
+                "qFieldLabels": [
+                  "=[Наименование продукта]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "JpuXn"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Наименование товара",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "CzUbte",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Наименование бренда]"
+                ],
+                "qFieldLabels": [
+                  "=[Наименование бренда]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "ZHAD"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Бренд",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "aJNwhsU",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=\"Вид продажи\""
+                ],
+                "qFieldLabels": [
+                  "=\"Вид продажи\""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "HUAzjX"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Вид продажи",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        }
+      ]
     },
     {
       "qProperty": {
@@ -805,7 +1135,7 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "Week"
+                  "Неделя"
                 ],
                 "qFieldLabels": [
                   "Неделя"
@@ -934,7 +1264,7 @@
               "qDef": {
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": "If(vMeasure ='Count',\r\n\tSum([Количество]),\n    \tIF(vMeasure='Currency', Sum([Общая сумма в чеке c НДС по конкретному товару]),\n    \t\tIF(vMeasure='CurrencyPP', Sum([Сумма по ЗЦ]),Sum([Количество])\n            )\n))",
+                "qDef": "If(vMeasure ='Count',\r\n\tSum([Количество]),\n    \tIF(vMeasure='Currency', Sum([Cумма с НДС]),\n    \t\tIF(vMeasure='CurrencyPP', Sum([Количество] * [Закупочная цена с НДС]),Sum([Количество])\n            )\n))",
                 "qNumFormat": {
                   "qType": "F",
                   "qnDec": 2,
@@ -1145,7 +1475,7 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=[Наименование магазина]"
+                  "=[Магазин]"
                 ],
                 "qFieldLabels": [
                   "Наименование магазина"
@@ -1210,7 +1540,7 @@
                 "qLabel": "Количество проданного товара",
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": "If(vMeasure ='Count',\r\n\tSum([Количество]),\n    \tIF(vMeasure='Currency', Sum([Общая сумма в чеке c НДС по конкретному товару]),\n    \t\tIF(vMeasure='CurrencyPP', Sum([Сумма по ЗЦ]),Sum([Количество])\n            )\n))",
+                "qDef": "If(vMeasure ='Count',\r\n\tSum([Количество]),\n    \tIF(vMeasure='Currency', Sum([Cумма с НДС]),\n    \t\tIF(vMeasure='CurrencyPP', Sum([Количество] * [Закупочная цена с НДС]),Sum([Количество])\n            )\n))",
                 "qNumFormat": {
                   "qType": "F",
                   "qnDec": 2,
@@ -1538,7 +1868,7 @@
               "qDef": {
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": "If(vMeasure ='Count',\r\n\tSum([Количество]),\n    \tIF(vMeasure='Currency', Sum([Общая сумма в чеке c НДС по конкретному товару]),\n    \t\tIF(vMeasure='CurrencyPP', Sum([Сумма по ЗЦ]),Sum([Количество])\n            )\n))",
+                "qDef": "If(vMeasure ='Count',\r\n\tSum([Количество]),\n    \tIF(vMeasure='Currency', Sum([Cумма с НДС]),\n    \t\tIF(vMeasure='CurrencyPP', Sum([Количество] * [Закупочная цена с НДС]),Sum([Количество])\n            )\n))",
                 "qNumFormat": {
                   "qType": "F",
                   "qnDec": 2,
@@ -1772,10 +2102,10 @@
               "qDef": {
                 "qGrouping": "N",
                 "qFieldDefs": [
-                  "=Week"
+                  "Неделя"
                 ],
                 "qFieldLabels": [
-                  "=Week"
+                  "Неделя"
                 ],
                 "qSortCriterias": [
                   {
@@ -1823,7 +2153,7 @@
               "qDef": {
                 "qTags": [],
                 "qGrouping": "N",
-                "qDef": "Sum([Общая сумма в чеке c НДС по конкретному товару])",
+                "qDef": "If(vMeasure ='Count',\r\n\tSum([Cумма с НДС]),\n    \tIF(vMeasure='Currency', Sum([Cумма с НДС]),\n    \t\tIF(vMeasure='CurrencyPP', Sum([Количество] * [Закупочная цена с НДС]),Sum([Количество])\n            )\n))",
                 "qNumFormat": {
                   "qType": "F",
                   "qnDec": 2,
@@ -1966,6 +2296,260 @@
     {
       "qProperty": {
         "qInfo": {
+          "qId": "jApuWM",
+          "qType": "filterpane"
+        },
+        "qMetaDef": {},
+        "qChildListDef": {
+          "qData": {
+            "info": "/qInfo"
+          }
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "visualization": "filterpane"
+      },
+      "qChildren": [
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "ZeppTXG",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Наименование торговой марки]"
+                ],
+                "qFieldLabels": [
+                  "=[Наименование торговой марки]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "WwTBh"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Торговая марка",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "ZQVBFCr",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Наименование поставщика]"
+                ],
+                "qFieldLabels": [
+                  "=[Наименование поставщика]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "exqWenR"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Наименование поставщика",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "hbZakRS",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Населенный пункт]"
+                ],
+                "qFieldLabels": [
+                  "=[Населенный пункт]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "hmthmVn"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Регион",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "mvaeLww",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Магазин]"
+                ],
+                "qFieldLabels": [
+                  "=[Магазин]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "hfDUNS"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Наименование магазина",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        },
+        {
+          "qProperty": {
+            "qInfo": {
+              "qId": "XJjja",
+              "qType": "listbox"
+            },
+            "qMetaDef": {},
+            "qListObjectDef": {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=[Тип подразделения]"
+                ],
+                "qFieldLabels": [
+                  "=[Тип подразделения]"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByState": 1,
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "ZEAM"
+              },
+              "qFrequencyMode": "N",
+              "qShowAlternatives": true,
+              "qInitialDataFetch": [],
+              "qExpressions": [],
+              "qOtherTotalSpec": {}
+            },
+            "showTitles": true,
+            "title": "Площадка",
+            "subtitle": "",
+            "footnote": "",
+            "disableNavMenu": false,
+            "showDetails": false,
+            "visualization": "listbox"
+          },
+          "qChildren": []
+        }
+      ]
+    },
+    {
+      "qProperty": {
+        "qInfo": {
           "qId": "HermBF",
           "qType": "action-button"
         },
@@ -2062,639 +2646,194 @@
     {
       "qProperty": {
         "qInfo": {
-          "qId": "MsfFy",
-          "qType": "filterpane"
+          "qId": "jrDKfu",
+          "qType": "action-button"
         },
         "qMetaDef": {},
-        "qChildListDef": {
-          "qData": {
-            "info": "/qInfo"
+        "actions": [
+          {
+            "actionLabel": "",
+            "actionType": "setVariable",
+            "bookmark": "",
+            "field": "",
+            "variable": "vMeasure",
+            "showSystemVariables": false,
+            "softLock": false,
+            "value": {
+              "qStringExpression": {
+                "qExpr": "'Currency'"
+              }
+            },
+            "partial": false,
+            "cId": "CCMaS"
           }
+        ],
+        "navigation": {
+          "action": "none",
+          "sheet": "",
+          "story": "",
+          "websiteUrl": "",
+          "sameWindow": false
         },
+        "useEnabledCondition": false,
+        "enabledCondition": 1,
         "showTitles": false,
         "title": "",
         "subtitle": "",
         "footnote": "",
-        "disableNavMenu": true,
+        "disableNavMenu": false,
         "showDetails": false,
-        "visualization": "filterpane"
+        "style": {
+          "label": "Сумма по розничной цене",
+          "font": {
+            "size": 1,
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": "",
+            "style": {
+              "bold": true,
+              "italic": false,
+              "underline": false
+            },
+            "align": "center"
+          },
+          "background": {
+            "useColorExpression": true,
+            "color": {
+              "index": 13,
+              "color": "#b0afae"
+            },
+            "colorExpression": {
+              "qStringExpression": {
+                "qExpr": "=IF(vMeasure = 'Currency','#83af9b',\r\nIF(vMeasure = 'Count','#b0afae','#b0afae'\n)\n)\n"
+              }
+            },
+            "useImage": false,
+            "size": "auto",
+            "position": "centerCenter",
+            "url": {
+              "qStaticContentUrlDef": {}
+            }
+          },
+          "border": {
+            "useBorder": true,
+            "radius": 0,
+            "width": 0,
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": ""
+          },
+          "icon": {
+            "useIcon": false,
+            "iconType": "",
+            "position": "left"
+          }
+        },
+        "visualization": "action-button"
       },
-      "qChildren": [
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "f5aaac9a-d3ec-4560-924a-343bf074ef1b",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "= [TRADEMARK]"
-                ],
-                "qFieldLabels": [
-                  "= [TRADEMARK]"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "kCrCh"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Торговая марка",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "djSjWz",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "Бренд"
-                ],
-                "qFieldLabels": [
-                  ""
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "ZHAD"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Бренд",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "mznvH",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "=[Отдел]"
-                ],
-                "qFieldLabels": [
-                  "=[Отдел]"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": []
-            },
-            "title": "Отдел",
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "SzTPt",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "=Группа"
-                ],
-                "qFieldLabels": [
-                  "=Группа"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "wFCqx"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Группа",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "hmNPd",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "=[Подгруппа]"
-                ],
-                "qFieldLabels": [
-                  "=[Подгруппа]"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "wEfQvB"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Подгруппа",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "JJRy",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "Баркод"
-                ],
-                "qFieldLabels": [
-                  "Баркод"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "PZwg"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Баркод",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "CdjfP",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "%Артикул"
-                ],
-                "qFieldLabels": [
-                  ""
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "mDcfagL"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Код товара",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "PGme",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "Наименование товара"
-                ],
-                "qFieldLabels": [
-                  ""
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "JpuXn"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Товар",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "2e10293c-500b-4127-8a4c-00ab7aa76862",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "is_opt"
-                ],
-                "qFieldLabels": [
-                  "is_opt"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "HUAzjX"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Опт",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        }
-      ]
+      "qChildren": []
     },
     {
       "qProperty": {
         "qInfo": {
-          "qId": "rhpLbjj",
-          "qType": "filterpane"
+          "qId": "SsCb",
+          "qType": "action-button"
         },
         "qMetaDef": {},
-        "qChildListDef": {
-          "qData": {
-            "info": "/qInfo"
+        "actions": [
+          {
+            "actionLabel": "",
+            "actionType": "setVariable",
+            "bookmark": "",
+            "field": "",
+            "variable": "vMeasure",
+            "showSystemVariables": false,
+            "softLock": false,
+            "value": {
+              "qStringExpression": {
+                "qExpr": "'Count'"
+              }
+            },
+            "partial": false,
+            "cId": "SXmWvnp"
           }
+        ],
+        "navigation": {
+          "action": "none",
+          "sheet": "",
+          "story": "",
+          "websiteUrl": "",
+          "sameWindow": false
         },
+        "useEnabledCondition": false,
+        "enabledCondition": 1,
         "showTitles": false,
         "title": "",
         "subtitle": "",
         "footnote": "",
-        "disableNavMenu": true,
+        "disableNavMenu": false,
         "showDetails": false,
-        "visualization": "filterpane"
+        "style": {
+          "label": "Штуки",
+          "font": {
+            "size": 0.64,
+            "useColorExpression": true,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": "",
+            "style": {
+              "bold": true,
+              "italic": false,
+              "underline": false
+            },
+            "align": "center"
+          },
+          "background": {
+            "useColorExpression": true,
+            "color": {
+              "index": 3,
+              "color": "#83af9b"
+            },
+            "colorExpression": {
+              "qStringExpression": {
+                "qExpr": "=IF(vMeasure = 'Count','#83af9b',\r\n'#b0afae'\n\n)\n"
+              }
+            },
+            "useImage": false,
+            "size": "auto",
+            "position": "centerCenter",
+            "url": {
+              "qStaticContentUrlDef": {}
+            }
+          },
+          "border": {
+            "useBorder": false,
+            "radius": 0,
+            "width": 0,
+            "useColorExpression": false,
+            "color": {
+              "index": -1,
+              "color": null
+            },
+            "colorExpression": ""
+          },
+          "icon": {
+            "useIcon": true,
+            "iconType": "",
+            "position": "left"
+          }
+        },
+        "visualization": "action-button"
       },
-      "qChildren": [
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "juCcmX",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "Наименование поставщика"
-                ],
-                "qFieldLabels": [
-                  "Наименование поставщика"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "exqWenR"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Поставщик",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "yNmPrR",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "Город"
-                ],
-                "qFieldLabels": [
-                  "Город"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "hmthmVn"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Регион",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "jpDHtP",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "Наименование магазина"
-                ],
-                "qFieldLabels": [
-                  "Наименование магазина"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "hfDUNS"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Магазин",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        },
-        {
-          "qProperty": {
-            "qInfo": {
-              "qId": "mVUJZB",
-              "qType": "listbox"
-            },
-            "qMetaDef": {},
-            "qListObjectDef": {
-              "qDef": {
-                "qGrouping": "N",
-                "qFieldDefs": [
-                  "= [Формат магазина]"
-                ],
-                "qFieldLabels": [
-                  "= [Формат магазина]"
-                ],
-                "qSortCriterias": [
-                  {
-                    "qSortByState": 1,
-                    "qSortByNumeric": 1,
-                    "qSortByAscii": 1,
-                    "qSortByLoadOrder": 1,
-                    "qExpression": {}
-                  }
-                ],
-                "qNumberPresentations": [],
-                "qActiveField": 0,
-                "autoSort": true,
-                "cId": "ZEAM"
-              },
-              "qFrequencyMode": "N",
-              "qShowAlternatives": true,
-              "qInitialDataFetch": [],
-              "qExpressions": [],
-              "qOtherTotalSpec": {}
-            },
-            "showTitles": true,
-            "title": "Формат",
-            "subtitle": "",
-            "footnote": "",
-            "disableNavMenu": false,
-            "showDetails": false,
-            "visualization": "listbox"
-          },
-          "qChildren": []
-        }
-      ]
+      "qChildren": []
     }
   ]
 }
